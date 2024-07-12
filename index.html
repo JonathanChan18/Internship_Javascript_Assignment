@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Assignment</title>
+</head>
+
+<style>
+    body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: #F3EFE7;
+    }
+
+    .button {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .calculator {
+        padding: 20px;
+        text-align: center;
+    }
+
+    .calculator input {
+        width: 80px;
+        padding: 10px;
+        margin: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+
+    .calculator button {
+        padding: 10px 20px;
+        margin: 5px;
+        border: none;
+        background-color: #007BFF;
+        color: #fff;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    .calculator button:hover {
+        background-color: #0056b3;
+    }
+
+    .result {
+        margin-top: 20px;
+        font-size: 20px;
+    }
+    #todo-container {
+            max-width: 400px;
+            margin: 50px auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        #todo-input {
+            width: calc(100% - 22px);
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+        #add-button {
+            padding: 10px 20px;
+        }
+        #todo-list {
+            list-style-type: none;
+            padding: 0;
+        }
+        .todo-item {
+            padding: 10px;
+            border-bottom: 1px solid #ccc;
+        }
+        .delete-button {
+            background-color: red;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+        .delete-button:hover {
+            background-color: darkred;
+        }
+</style>
+
+<body>
+    <div class="button">
+        <button id="text-button">Change Text</button>
+        <button id="visibility-button" onclick="myFunction()">Toggle Visibility</button>
+        <button id="color-button">Change Color</button>
+    </div>
+
+    <p id="paragraph">Click the button to change the text!</p>
+
+    <hr>
+    <div class="calculator">
+        <h2>Calculator</h2>
+        <input type="number" id="num1" placeholder="Number 1">
+        <input type="number" id="num2" placeholder="Number 2">
+        <div>
+            <button onclick="calculate('add')">+</button>
+            <button onclick="calculate('subtract')">-</button>
+            <button onclick="calculate('multiply')">*</button>
+            <button onclick="calculate('divide')">/</button>
+        </div>
+        <div class="result" id="result"></div>
+    </div>
+    <hr>
+
+    <form name="form" onsubmit="return validateForm()">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        <button type="submit">Submit</button>
+    </form>
+    <hr>
+
+    <label for="username">Enter your name:</label>
+    <input type="text" id="username" name="username" placeholder="Enter your Name">
+    <button type="submit" id="greet-button">Enter</button>
+    <p id="greeting"></p>
+
+    <p>Hover on image!</p>
+    <img id="hover-image" src="images/Carousel_2.jpg" alt="Original Image">
+
+    <div id="todo-container">
+        <h1>To-Do List</h1>
+        <input type="text" id="todo-input" placeholder="Enter a new to-do">
+        <button id="add-button">Add</button>
+        <ul id="todo-list"></ul>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
